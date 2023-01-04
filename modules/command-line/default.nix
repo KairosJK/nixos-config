@@ -1,0 +1,6 @@
+[
+  ./direnv
+  ./exa
+  ./git
+  ./starship
+]

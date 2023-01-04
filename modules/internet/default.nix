@@ -1,0 +1,4 @@
+[
+  ./brave
+  ./firefox
+]
