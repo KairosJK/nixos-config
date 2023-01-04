@@ -8,6 +8,7 @@
     inherit stateVersion;
     packages = with pkgs; [
       gparted
+      pavucontrol
       htop
       killall
       neofetch

@@ -11,13 +11,18 @@
 
     kernelPackages = pkgs.linuxPackages_latest;
 
-    # change to grub
     loader = {
+      grub = {
+        enable = true;
+        efiSupport = true;
+        device = "nodev";
+        version = 2;
+        useOSProber = true;
+      };
       efi = {
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot/efi";
       };
-      systemd-boot.enable = true;
     };
   };
 }
