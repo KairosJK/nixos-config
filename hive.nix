@@ -29,7 +29,6 @@
             useUserPackages = true;
           };
         }
-        inputs.kmonad.nixosModules.default
       ]
       ++ systemFiles;
   };

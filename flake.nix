@@ -12,18 +12,12 @@
       url = "github:nix-community/home-manager";
     };
 
-    kmonad = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:kmonad/kmonad?dir=nix";
-    };
-
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs = {
     colmena,
     home-manager,
-    kmonad,
     nixpkgs,
     self,
     ...

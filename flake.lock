@@ -76,28 +76,6 @@
         "type": "github"
       }
     },
-    "kmonad": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "nix",
-        "lastModified": 1669553353,
-        "narHash": "sha256-q2sn1vqpzTAEmWLBnslEjKwTpTR1bT7YnuLbuLFfVUw=",
-        "owner": "kmonad",
-        "repo": "kmonad",
-        "rev": "596ed91500d6908b3dc8b97023f431115900c470",
-        "type": "github"
-      },
-      "original": {
-        "dir": "nix",
-        "owner": "kmonad",
-        "repo": "kmonad",
-        "type": "github"
-      }
-    },
     "nix-eval-jobs": {
       "inputs": {
         "flake-utils": [
@@ -144,7 +122,6 @@
       "inputs": {
         "colmena": "colmena",
         "home-manager": "home-manager",
-        "kmonad": "kmonad",
         "nixpkgs": "nixpkgs"
       }
     },
