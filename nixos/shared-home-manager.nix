@@ -11,6 +11,7 @@
       pavucontrol
       btop
       killall
+      youtube-dl
       neofetch
       feh
       unzip
@@ -30,6 +31,7 @@
     ++ (import ../modules/shells)
     ++ (import ../modules/terminal-emulators)
     ++ [(import ../modules/i3wm)];
+  #++ [(import ../modules/services/picom)];
 
   xsession = {
     enable = true;

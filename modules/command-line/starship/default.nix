@@ -5,8 +5,8 @@
       enableZshIntegration = true;
       settings = {
         character = {
-          success_symbol = "λ";
-          error_symbol = "✻";
+          success_symbol = "[λ](green)";
+          error_symbol = "[λ](red)";
         };
         format = lib.concatStrings [
           "$hostname"

@@ -9,16 +9,24 @@
 
       desktopManager = {
         xterm.enable = false;
-        #xfce = {
-        #  enable = true;
-        #  noDesktop = true;
-        #  enableXfwm = false;
-        #};
       };
 
       #Configure I3 as dm
       displayManager = {
-        gdm.enable = true;
+        lightdm = {
+          enable = true;
+          background = "#000000";
+          greeters.slick = {
+            enable = true;
+            extraConfig = ''
+              only-on-monitor=DP-1
+              show-a11y=false
+              show-hostname=false
+              show-keyboard=false
+            '';
+            font.name = "Terminus";
+          };
+        };
         defaultSession = "none+i3";
       };
 
