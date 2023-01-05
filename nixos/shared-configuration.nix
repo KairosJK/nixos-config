@@ -9,9 +9,9 @@
 
   imports = [
     ../modules/sound
+    ../modules/font
     ../modules/services/x11
   ];
-
 
   nix = {
     extraOptions = ''

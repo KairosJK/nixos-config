@@ -7,8 +7,4 @@
     enable = true;
     pulse.enable = true;
   };
-  # sound.enable = true;
-
-  
-
 }

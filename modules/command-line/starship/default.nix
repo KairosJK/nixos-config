@@ -6,7 +6,7 @@
       settings = {
         character = {
           success_symbol = "λ";
-          error_symbol = "⊥";
+          error_symbol = "✻";
         };
         format = lib.concatStrings [
           "$hostname"

@@ -92,8 +92,8 @@ _: {
             white = "#BAC2DE"; # subtext1
           };
         };
-        font.family = "VictorMono";
-        font.size = 12;
+        font.normal.family = "Terminus";
+        font.size = 14;
         window = {
           padding = {
             x = 5;

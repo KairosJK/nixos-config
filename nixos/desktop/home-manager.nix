@@ -16,5 +16,5 @@
 
   #home.sessionVariables = {};
 
-  imports = (import ../../modules/services);
+  imports = import ../../modules/services;
 }
