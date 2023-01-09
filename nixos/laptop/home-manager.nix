@@ -18,8 +18,14 @@
   #home.sessionVariables = {};
 
   imports =
-    (import ../../modules/services)
-    ++ [(import ../../modules/i3status-rust/laptop)];
+    import ../../modules/services;
 
-  xsession.windowManager.i3.extraConfig = "workspace 1 output eDP-1";
+  xsession = {
+    initExtra = ''
+      feh --bg-scale ~/nixos-config/wallpaper/wallpaper_laptop.png
+    '';
+    windowManager.i3.extraConfig = ''
+      workspace 1 output eDP-1
+    '';
+  };
 }

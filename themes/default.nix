@@ -1,5 +1,5 @@
 {
-  black = "#1A1A1A";
+  black = "#000000";
   white = "#CDD6F4";
   red = "#742323";
   green = "#008238";

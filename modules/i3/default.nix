@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  themes,
   pkgs,
   ...
 }: let
@@ -18,6 +19,48 @@ in {
       };
 
       terminal = "alacritty";
+
+      window = {
+        border = 4;
+      };
+
+      colors = {
+        focused = {
+          border = themes.white;
+          background = themes.black;
+          childBorder = themes.white;
+          indicator = themes.white;
+          text = themes.white;
+        };
+        focusedInactive = {
+          border = themes.black;
+          background = themes.black;
+          childBorder = themes.black;
+          indicator = themes.black;
+          text = themes.white;
+        };
+        placeholder = {
+          border = themes.black;
+          background = themes.black;
+          childBorder = themes.black;
+          indicator = themes.black;
+          text = themes.white;
+        };
+        unfocused = {
+          border = themes.black;
+          background = themes.black;
+          childBorder = themes.black;
+          indicator = themes.black;
+          text = themes.white;
+        };
+        urgent = {
+          border = themes.red;
+          background = themes.black;
+          childBorder = themes.red;
+          indicator = themes.red;
+          text = themes.white;
+        };
+      };
 
       gaps = {
         inner = 10;
