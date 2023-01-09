@@ -30,6 +30,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  environment.pathsToLink = ["/libexec"];
+
   programs.dconf.enable = true;
 
   users.users.${user} = {

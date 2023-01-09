@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   fonts.fonts = with pkgs; [
     terminus_font
-    (nerdfonts.override {fonts = ["Terminus"];})
+    fira-code
+    (nerdfonts.override {fonts = ["FiraCode"];})
   ];
 }

@@ -16,5 +16,11 @@
 
   #home.sessionVariables = {};
 
-  imports = import ../../modules/services;
+  imports =
+    (import ../../modules/services);
+
+  xsession.windowManager.i3.extraConfig = ''
+    workspace 1 output DP-4
+    workspace 2 output HDMI-0
+  '';
 }

@@ -1,16 +1,14 @@
-{...}: let
-  black = "#000000";
-  white = "#CDD6F4";
-  #red = "#a53c23";
-  red = "#cd5c5c";
-  green = "#86af80";
-  #green = "#7b9246";
-  yellow = "#e8ae5b";
-  blue = "#6495ed";
-  magenta = "#9f4e85";
-  cyan = "#4cbf99";
+{themes, ...}: let
+  black = themes.black;
+  white = themes.white;
+  red = themes.red;
+  green = themes.green;
+  yellow = themes.yellow;
+  blue = themes.blue;
+  magenta = themes.magenta;
+  cyan = themes.cyan;
 
-  grey = "#a5a2a2";
+  grey = themes.grey;
 
   background = black;
   foreground = white;

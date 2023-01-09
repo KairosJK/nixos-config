@@ -8,8 +8,10 @@
 
   security.sudo.wheelNeedsPassword = false;
 
-  # Trackpad
+  # Trackpad. Backlight and Media Keys
   services.xserver.libinput.enable = true;
+  sound.mediaKeys.enable = true;
+  programs.light.enable = true;
 
   users.users.${user} = {
     openssh.authorizedKeys.keys = [
