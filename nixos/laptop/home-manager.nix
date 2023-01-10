@@ -18,7 +18,8 @@
   #home.sessionVariables = {};
 
   imports =
-    import ../../modules/services;
+    import ../../modules/services
+    ++ [(import ../../modules/i3status-rust/laptop)];
 
   xsession = {
     initExtra = ''

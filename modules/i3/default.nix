@@ -19,17 +19,14 @@ in {
       };
 
       terminal = "alacritty";
-
-      window = {
-        border = 4;
-      };
+      menu = "${pkgs.rofi}/bin/rofi -show drun -show-icons";
 
       colors = {
         focused = {
-          border = themes.white;
+          border = "#FFFFFF";
           background = themes.black;
-          childBorder = themes.white;
-          indicator = themes.white;
+          childBorder = "#FFFFFF";
+          indicator = "#FFFFFF";
           text = themes.white;
         };
         focusedInactive = {
@@ -68,7 +65,8 @@ in {
       };
 
       keybindings = lib.mkOptionDefault {
-        "${mod}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
+        "${mod}+w" = "exec ${pkgs.rofi}/bin/rofi -show window -show-icons";
+        "${mod}+s" = "exec ${pkgs.rofi}/bin/rofi -show ssh -show-icons";
         "${mod}+Return" = "exec ${pkgs.alacritty}/bin/alacritty";
         "${mod}+Shift+f" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+x" = "exec sh -c '${pkgs.i3lock}/bin/i3lock -c 222222 & sleep 5 && xset dpms force of'";
@@ -87,6 +85,7 @@ in {
       };
       bars = [
         {
+          # Laptop Bar
           position = "top";
           trayOutput = "none";
 
@@ -95,16 +94,14 @@ in {
             size = 14.0;
           };
 
-          # get i3status-rust conf
-          #statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-top.toml";
+          statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-default.toml";
 
-          # set primary monitor as output / set laptop for output
           extraConfig = ''
             output eDP-1
-            output DP-4
           '';
         }
         {
+          # Desktop 01 Bar
           position = "top";
           trayOutput = "none";
 
@@ -113,15 +110,31 @@ in {
             size = 14.0;
           };
 
-          # get i3status-rust conf
-          #statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-top.toml";
+          statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-default.toml";
 
-          # set primary monitor as output / set laptop for output
+          extraConfig = ''
+            output DP-4
+          '';
+        }
+
+        {
+          # Desktop 02 Bar
+          position = "top";
+          trayOutput = "none";
+
+          fonts = {
+            names = ["Terminus" "FiraCode"];
+            size = 14.0;
+          };
+
           extraConfig = ''
             output HDMI-0
           '';
         }
       ];
     };
+    extraConfig = ''
+      for_window [class=".*"] border pixel 4
+    ''; # Window border option does not express itself on every window, so this workaround is used
   };
 }

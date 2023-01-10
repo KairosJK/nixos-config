@@ -10,9 +10,11 @@
       gparted
       pavucontrol
       btop
+      i3status-rust
       xclip
       xfce.thunar
       killall
+      deluge
       alsa-utils
       youtube-dl
       neofetch
