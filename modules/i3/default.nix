@@ -87,7 +87,7 @@ in {
         {
           # Laptop Bar
           position = "top";
-          trayOutput = "none";
+          trayOutput = "primary";
 
           fonts = {
             names = ["Terminus" "FiraCode"];
