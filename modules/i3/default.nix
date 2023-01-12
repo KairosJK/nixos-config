@@ -88,7 +88,7 @@ in {
         {
           # Laptop Bar
           position = "top";
-          trayOutput = "none";
+          trayOutput = "primary";
 
           colors = {
             background = themes.black;

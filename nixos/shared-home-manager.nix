@@ -15,6 +15,7 @@
       xfce.thunar
       killall
       deluge
+      networkmanagerapplet
       alsa-utils
       youtube-dl
       neofetch
