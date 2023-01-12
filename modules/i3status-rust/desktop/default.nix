@@ -4,13 +4,17 @@
     bars = {
       default = {
         icons = "material-nf";
-        #settings = {
-        #  theme = {
-        #    name = "slick";
-        #    seperator = "";
-        #  };
-        #};
+        theme = "gruvbox-dark";
         blocks = [
+          {
+            block = "music";
+            player = "spotify";
+            max_width = 75;
+            dynamic_width = true;
+            seek_step = 5000;
+            buttons = ["prev" "play" "next"];
+            on_collapsed_click = "spotify";
+          }
           {
             block = "networkmanager";
             on_click = "alacritty -e nmtui";

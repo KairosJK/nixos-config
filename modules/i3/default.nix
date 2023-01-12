@@ -23,31 +23,31 @@ in {
 
       colors = {
         focused = {
-          border = "#FFFFFF";
+          border = themes.bright_white;
           background = themes.black;
-          childBorder = "#FFFFFF";
-          indicator = "#FFFFFF";
+          childBorder = themes.bright_white;
+          indicator = themes.bright_white;
           text = themes.white;
         };
         focusedInactive = {
-          border = themes.black;
+          border = themes.white;
           background = themes.black;
-          childBorder = themes.black;
-          indicator = themes.black;
+          childBorder = themes.white;
+          indicator = themes.white;
           text = themes.white;
         };
         placeholder = {
-          border = themes.black;
+          border = themes.white;
           background = themes.black;
-          childBorder = themes.black;
-          indicator = themes.black;
+          childBorder = themes.white;
+          indicator = themes.white;
           text = themes.white;
         };
         unfocused = {
-          border = themes.black;
+          border = themes.white;
           background = themes.black;
-          childBorder = themes.black;
-          indicator = themes.black;
+          childBorder = themes.white;
+          indicator = themes.white;
           text = themes.white;
         };
         urgent = {
@@ -68,7 +68,8 @@ in {
         "${mod}+w" = "exec ${pkgs.rofi}/bin/rofi -show window -show-icons";
         "${mod}+s" = "exec ${pkgs.rofi}/bin/rofi -show ssh -show-icons";
         "${mod}+Return" = "exec ${pkgs.alacritty}/bin/alacritty";
-        "${mod}+Shift+f" = "exec ${pkgs.firefox}/bin/firefox";
+        "${mod}+Shift+f" = "exec ${pkgs.flameshot}/bin/flameshot gui";
+        "${mod}+b" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+x" = "exec sh -c '${pkgs.i3lock}/bin/i3lock -c 222222 & sleep 5 && xset dpms force of'";
 
         # Focus
@@ -89,6 +90,30 @@ in {
           position = "top";
           trayOutput = "none";
 
+          colors = {
+            background = themes.black;
+            focusedWorkspace = {
+              background = themes.blue;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };
+            activeWorkspace = {
+              background = themes.bright_black;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };
+            inactiveWorkspace = {
+              background = themes.black;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };
+            urgentWorkspace = {
+              background = themes.red;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };            
+          };
+
           fonts = {
             names = ["Terminus" "FiraCode"];
             size = 14.0;
@@ -104,6 +129,30 @@ in {
           # Desktop 01 Bar
           position = "top";
           trayOutput = "none";
+
+          colors = {
+            background = themes.black;
+            focusedWorkspace = {
+              background = themes.blue;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };
+            activeWorkspace = {
+              background = themes.bright_black;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };
+            inactiveWorkspace = {
+              background = themes.black;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };
+            urgentWorkspace = {
+              background = themes.red;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };            
+          };
 
           fonts = {
             names = ["Terminus" "FiraCode"];
@@ -121,6 +170,30 @@ in {
           # Desktop 02 Bar
           position = "top";
           trayOutput = "none";
+
+          colors = {
+            background = themes.black;
+            focusedWorkspace = {
+              background = themes.blue;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };
+            activeWorkspace = {
+              background = themes.bright_black;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };
+            inactiveWorkspace = {
+              background = themes.black;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };
+            urgentWorkspace = {
+              background = themes.red;
+              border = themes.bright_white;
+              text = themes.bright_white;
+            };            
+          };
 
           fonts = {
             names = ["Terminus" "FiraCode"];

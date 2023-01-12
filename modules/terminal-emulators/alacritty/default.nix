@@ -8,10 +8,17 @@
   magenta = themes.magenta;
   cyan = themes.cyan;
 
-  grey = themes.grey;
+  bright_black = themes.bright_black;
+  bright_white = themes.bright_white;
+  bright_red = themes.bright_red;
+  bright_green = themes.bright_green;
+  bright_yellow = themes.bright_yellow;
+  bright_blue = themes.bright_blue;
+  bright_magenta = themes.bright_magenta;
+  bright_cyan = themes.bright_cyan;
 
   background = black;
-  foreground = white;
+  foreground = bright_white;
 in {
   programs = {
     alacritty = {
@@ -42,7 +49,7 @@ in {
           search = {
             matches = {
               inherit foreground;
-              background = grey;
+              background = white; #grey
             };
             focused_match = {
               inherit foreground;
@@ -50,7 +57,7 @@ in {
             };
             footer_bar = {
               inherit foreground;
-              background = grey;
+              background = white; #grey
             };
           };
 
@@ -62,7 +69,7 @@ in {
             };
             end = {
               inherit foreground;
-              background = grey;
+              background = white; #grey
             };
           };
 

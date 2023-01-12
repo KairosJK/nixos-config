@@ -4,12 +4,7 @@
     bars = {
       default = {
         icons = "material-nf";
-        #settings = {
-        #  theme = {
-        #    name = "slick";
-        #    seperator = "";
-        #  };
-        #};
+        theme = "gruvbox-dark";
         blocks = [
           {
             block = "networkmanager";
