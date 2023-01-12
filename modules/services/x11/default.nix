@@ -15,16 +15,15 @@
       displayManager = {
         lightdm = {
           enable = true;
-          background = "#000000";
+          background = "#282828";
           greeters.slick = {
             enable = true;
             extraConfig = ''
-              only-on-monitor=DP-1
+              only-on-monitor=DP-4
               show-a11y=false
-              show-hostname=false
               show-keyboard=false
             '';
-            font.name = "Terminus";
+            font.name = "terminus";
           };
         };
         defaultSession = "none+i3";
