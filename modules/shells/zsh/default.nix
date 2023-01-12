@@ -6,7 +6,6 @@
       enableSyntaxHighlighting = true;
       initExtra = "neofetch --ascii_distro NixOS_small --color_blocks off --disable cpu gpu memory term de resolution kernel model";
       initExtraBeforeCompInit = lib.concatStrings [
-        "alias c=\"clear\"\n"
         "alias gc=\"git clone\"\n"
         "alias cat=\"bat\"\n" # Remap cat to bat for syntax highlighting
         "alias yt=\"youtube-dl --add-metadata -ic\"\n" # Download Youtube Videos
