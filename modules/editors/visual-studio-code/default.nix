@@ -3,6 +3,9 @@
     vscode = {
       enable = true;
       package = pkgs.vscode.fhs;
+      #userSettings = {
+      #  "editor.fontFamily" = "Terminus";
+      #};
       #extensions = with pkgs.vscode-extensions; [
       #  # catppuccin.catppuccin-vsc
       #  elmtooling.elm-ls-vscode

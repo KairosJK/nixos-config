@@ -3,6 +3,7 @@
     fonts = with pkgs; [
     terminus_font
     fira-code
+    dejavu_fonts
     (nerdfonts.override {fonts = ["FiraCode"];})
     ];
 
@@ -11,6 +12,8 @@
     fontconfig = {
       defaultFonts = {
         monospace = ["Terminus"];
+        sansSerif = ["DejaVu Sans"];
+        serif = ["DejaVu Serif"];
       };
     };
   };
