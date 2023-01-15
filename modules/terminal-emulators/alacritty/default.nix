@@ -94,7 +94,7 @@ in {
           };
         };
         font.normal.family = "Terminus";
-        font.size = 14;
+        font.size = 10;
         window = {
           padding = {
             x = 10;

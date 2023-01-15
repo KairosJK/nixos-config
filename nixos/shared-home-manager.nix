@@ -9,6 +9,7 @@
     packages = with pkgs; [
       gparted
       pavucontrol
+      iw
       btop
       i3status-rust
       xclip
@@ -22,6 +23,11 @@
       feh
       unzip
       wine
+      gnumake
+      obsidian
+      gdb
+      gcc
+      valgrind
       zip
     ];
     username = "${user}";
