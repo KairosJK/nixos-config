@@ -35,7 +35,7 @@
   programs.dconf.enable = true;
 
   users.users.${user} = {
-    extraGroups = ["networkmanager" "wheel" "vboxusers"]; #sound
+    extraGroups = ["networkmanager" "wheel" "vboxusers" "docker"]; #sound
     isNormalUser = true;
     shell = pkgs.zsh;
   };
