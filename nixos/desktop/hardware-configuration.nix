@@ -29,11 +29,11 @@
   ];
 
   networking.useDHCP = lib.mkDefault true;
-
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware = {
     opengl.enable = true;
+    opengl.driSupport32Bit = true;
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
