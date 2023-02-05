@@ -8,6 +8,7 @@
     inherit stateVersion;
     packages = with pkgs; [
       gparted
+      ripgrep
       pavucontrol
       iw
       btop
@@ -35,6 +36,7 @@
 
   home.sessionVariables = {
     DIRENV_LOG_FORMAT = "";
+    NIXOS_CONF_DIR = "$HOME/nixos-config/";
   };
 
   imports =

@@ -30,7 +30,10 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.pathsToLink = ["/libexec"];
+  environment = {
+    variables.EDITOR = "nvim";
+    pathsToLink = ["/libexec"];
+  };
 
   programs.dconf.enable = true;
 
