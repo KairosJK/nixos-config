@@ -28,6 +28,7 @@
       obsidian
       gdb
       gcc
+      clang-tools
       valgrind
       zip
     ];

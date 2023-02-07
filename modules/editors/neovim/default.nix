@@ -1,4 +1,9 @@
 {pkgs, lib, ...}: {
+ 
+  home.packages = with pkgs; [
+    rnix-lsp nixfmt
+    sumneko-lua-language-server stylua
+  ];
   programs = {
     neovim = {
       enable = true;
@@ -6,10 +11,19 @@
       vimAlias = true;
       extraConfig = ''
         luafile $HOME/nixos-config/modules/editors/neovim/config/settings.lua
-      '';
+        luafile $HOME/nixos-config/modules/editors/neovim/config/language_server_conf.lua
+        '';
       plugins = with pkgs.vimPlugins; [
-	    vim-nix
+        
+        # Misc
+        vim-nix
         plenary-nvim
+        vimsence
+ 
+        # Language Server Tools
+        nvim-lspconfig
+        nvim-compe
+
         {
 	      plugin = gruvbox;
 	      config = "colorscheme gruvbox";
