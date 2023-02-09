@@ -1,8 +1,8 @@
 {pkgs, lib, ...}: {
  
   home.packages = with pkgs; [
-    rnix-lsp nixfmt
-    sumneko-lua-language-server stylua
+    rnix-lsp nixfmt # nix lsp
+    sumneko-lua-language-server stylua # lua lsp
   ];
   programs = {
     neovim = {
